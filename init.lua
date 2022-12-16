@@ -8,9 +8,18 @@ require('autopair')
  
 require('completion')
  
---require('tele')
- 
 require('lua_line')
- 
---require('comment_line')
 
+require('_telescope')
+
+require('devicons')
+
+require('lsp_saga')
+
+require('neo_solarized')
+
+require('buffer_line')
+
+require('treesitter')
+
+require('_gitsigns')

@@ -5,8 +5,10 @@ vim.o.sw=2
 vim.o.ts=2
 vim.o.mouse='a'
 vim.o.termguicolors=true
-vim.cmd("colorscheme NeoSolarized")
-vim.cmd("let g:badwolf_darkgutter = 1")
+vim.o.signcolumn='yes'
+vim.opt.wildignore:append {'*/node_modules/*'}
+vim.cmd("syntax enable")
+vim.cmd("colorscheme neosolarized")
 
 local opts = {noremap=true,silent=true}
 
