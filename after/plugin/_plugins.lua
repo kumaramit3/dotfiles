@@ -35,6 +35,7 @@ packer.startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-cmdline'
   use {'akinsho/bufferline.nvim', tag="v3.*"}
+  use 'onsails/lspkind.nvim'
 
   --luasnip
   use 'L3MON4D3/LuaSnip'
@@ -46,7 +47,8 @@ packer.startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use 'kyazdani42/nvim-web-devicons'
 
-  --gtisigns  
+  --git  
+  use 'dinhhuy258/git.nvim'
   use 'lewis6991/gitsigns.nvim'
 end
 
