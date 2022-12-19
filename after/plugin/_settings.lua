@@ -1,30 +1,41 @@
-vim.o.number=true
-vim.o.relativenumber=true
-vim.o.expandtab=true
-vim.o.sw=2
-vim.o.ts=2
-vim.o.mouse='a'
-vim.o.termguicolors=true
-vim.o.signcolumn='yes'
-vim.opt.wildignore:append {'*/node_modules/*'}
-vim.cmd("syntax enable")
-vim.cmd("colorscheme neosolarized")
+vim.opt.number=true
+vim.opt.expandtab=true
+vim.opt.sw=2
+vim.opt.ts=2
+vim.opt.mouse='a'
+vim.opt.signcolumn='yes'
+vim.opt.wrap=false
+vim.opt.shell='pwsh'
+vim.opt.ignorecase=true
+
+vim.opt.background = 'dark'
+vim.opt.cursorline = true
+vim.opt.syntax = enable
+vim.opt.termguicolors=true
 
 local opts = {noremap=true,silent=true}
-
+local keymap = vim.keymap
 local leader = '\\'
 
-vim.api.nvim_set_keymap('i', '<C-s>', '<esc>:w<CR>',opts)
-vim.api.nvim_set_keymap('n','<c-l>', '<c-w>l', opts)
-vim.api.nvim_set_keymap('n','<c-h>', '<c-w>h', opts)
-vim.api.nvim_set_keymap('n','<c-j>', '<c-w>j', opts)
-vim.api.nvim_set_keymap('n','<c-k>', '<c-w>k', opts)
-vim.api.nvim_set_keymap('n',';t', ':Lexplore<CR>', opts)
-vim.api.nvim_set_keymap('i','<c-s>', '<esc>:w<CR>', opts)
-vim.api.nvim_set_keymap('n','<space>f', ':normal gg=G<cr>', opts)
-vim.api.nvim_set_keymap('t', '<esc>', '<C-\\><C-n>', opts)
-vim.api.nvim_set_keymap('n','<leader>m', ':cd ~/AppData/Local/nvim/lua<CR>',opts)
+keymap.set('i', '<C-s>', '<esc>:w<CR>',opts)
+keymap.set('n','<space>f', ':normal gg=G<cr>', opts)
+keymap.set('t', '<esc>', '<C-\\><C-n>', opts)
+keymap.set('n','<leader>m', ':cd ~/AppData/Local/nvim/lua<CR>',opts)
 
---transparent
+keymap.set('n','te',':tabedit')
+keymap.set('n','ss', ':split<Return><C-w>w')
+keymap.set('n','sv', ':vsplit<Return><C-w>w')
 
-vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
+keymap.set('n', '<Space>', '<C-w>w')
+keymap.set('', 'sh', '<C-w>h')
+keymap.set('', 'sk', '<C-w>k')
+keymap.set('', 'sj', '<C-w>j')
+keymap.set('', 'sl', '<C-w>l')
+
+
+vim.cmd [[
+  augroup highlight_yank
+  autocmd!
+  au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=100})
+  augroup END
+]]

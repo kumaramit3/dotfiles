@@ -109,6 +109,21 @@ _G.packer_plugins = {
     path = "C:\\Users\\ASUS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
+  ["git.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\ASUS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\git.nvim",
+    url = "https://github.com/dinhhuy258/git.nvim"
+  },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\ASUS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["lspkind.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\ASUS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lspkind.nvim",
+    url = "https://github.com/onsails/lspkind.nvim"
+  },
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "C:\\Users\\ASUS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lspsaga.nvim",
@@ -134,11 +149,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\ASUS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-lsp-installer"] = {
-    loaded = true,
-    path = "C:\\Users\\ASUS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "C:\\Users\\ASUS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
@@ -148,6 +158,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\ASUS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "C:\\Users\\ASUS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
   },
   ["nvim-web-devicons"] = {
     loaded = true,

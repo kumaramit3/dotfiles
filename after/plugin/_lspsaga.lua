@@ -1,6 +1,9 @@
+local status,saga = pcall(require,'lspsaga')
+if (not status) then return end
+
 local keymap = vim.keymap.set
-local saga = require('lspsaga')
 local opts = { noremap = true, silent = true }
+local leader = '\\'
 
 saga.init_lsp_saga()
 
@@ -18,4 +21,3 @@ keymap('n', 'gp', '<Cmd>Lspsaga peek_definition<CR>', opts)
 
 keymap('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
 
---keymap('n', 'gn', '<Cmd>Lspsaga open_floaterm<CR>', opts )

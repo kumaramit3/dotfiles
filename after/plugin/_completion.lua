@@ -7,7 +7,7 @@ cmp.setup({
       mode = 'symbol',
       maxwidth = 50,
       ellipsis_char = '...',
-    }) 
+    })
   },
   snippet = {
     expand=function(args)
@@ -41,10 +41,8 @@ cmp.setup.cmdline('/', {
 })
 
 cmp.setup.cmdline(':', {
-  sources = cmp.config.sources({
-    { name = 'path' }
-  }, {
-    { name = 'cmdline' }
-  })
+  sources = {
+   {name = 'cmdline'}
+  }
 })
 

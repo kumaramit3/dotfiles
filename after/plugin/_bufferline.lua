@@ -17,7 +17,7 @@ bufferline.setup({
       bg='#002b36',
     },
     separator_selected = {
-      fg = '#073642'
+      fg = '#073642',
     },
     background = {
       fg = '#657b83',
@@ -28,7 +28,7 @@ bufferline.setup({
       bold = true,
     },
     fill = {
-      bg = "#073642"
+      bg = "#09414f"
     }
   }
 })

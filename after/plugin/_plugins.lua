@@ -8,20 +8,19 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-  use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
-  use 'glepnir/lspsaga.nvim'
 
   --telescope 
   use {
     'nvim-telescope/telescope.nvim', tag='0.1.0',
     requires = {{'nvim-lua/plenary.nvim'}}
   }
+  use 'nvim-telescope/telescope-file-browser.nvim'
 
   --treesitter
   use 'nvim-treesitter/nvim-treesitter'
   use 'windwp/nvim-ts-autotag'
   --themes
+
   use {
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim'}
@@ -29,13 +28,15 @@ packer.startup(function(use)
   --zen mode
   use 'folke/zen-mode.nvim'
 
-  --completion
-  use 'hrsh7th/cmp-nvim-lsp'
+  --lspPlugins
+  use 'neovim/nvim-lspconfig'
+  use 'glepnir/lspsaga.nvim'
+  use 'onsails/lspkind.nvim'
   use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-cmdline'
   use {'akinsho/bufferline.nvim', tag="v3.*"}
-  use 'onsails/lspkind.nvim'
 
   --luasnip
   use 'L3MON4D3/LuaSnip'
@@ -43,12 +44,15 @@ packer.startup(function(use)
 
   --nvim-autopairs
   use 'windwp/nvim-autopairs'
+
   --lualine
   use 'nvim-lualine/lualine.nvim'
   use 'kyazdani42/nvim-web-devicons'
 
+  --comment 
+  use 'numToStr/Comment.nvim'
+
   --git  
-  use 'dinhhuy258/git.nvim'
   use 'lewis6991/gitsigns.nvim'
 end
 
