@@ -1,4 +1,5 @@
 vim.opt.number=true
+vim.opt.relativenumber = true
 vim.opt.expandtab=true
 vim.opt.sw=2
 vim.opt.ts=2
@@ -20,7 +21,7 @@ local leader = '\\'
 keymap.set('i', '<C-s>', '<esc>:w<CR>',opts)
 keymap.set('n','<space>f', ':normal gg=G<cr>', opts)
 keymap.set('t', '<esc>', '<C-\\><C-n>', opts)
-keymap.set('n','<leader>m', ':cd ~/AppData/Local/nvim/lua<CR>',opts)
+keymap.set('n','<leader>m', ':cd ~/AppData/Local/nvim<CR>',opts)
 
 keymap.set('n','te',':tabedit')
 keymap.set('n','ss', ':split<Return><C-w>w')
