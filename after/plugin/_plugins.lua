@@ -20,11 +20,13 @@ packer.startup(function(use)
   use 'nvim-treesitter/nvim-treesitter'
   use 'windwp/nvim-ts-autotag'
   --themes
-
+  use "olimorris/onedarkpro.nvim"
+  use ({ "projekt0n/github-nvim-theme", tag = 'v0.0.7'})
   use {
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim'}
   }  
+
   --zen mode
   use 'folke/zen-mode.nvim'
 

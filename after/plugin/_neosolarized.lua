@@ -1,16 +1,11 @@
-local status, n = pcall(require, "neosolarized")
+--[[ local status, n = pcall(require, "neosolarized")
 if (not status) then return end
 
 n.setup({
     comment_italics = true,
   })
 
-  local cb = require('colorbuddy.init')
-  local Color = cb.Color
-  local colors = cb.colors
-  local Group = cb.Group
-  local groups = cb.groups
-  local styles = cb.styles
+  local Color, colors, Group, groups, styles = require('colorbuddy').setup()
 
 
   Color.new('black', '#000000')
@@ -30,4 +25,4 @@ n.setup({
   Group.new("DiagnosticUnderlineError", colors.none, colors.none, styles.undercurl, cError)
   Group.new("DiagnosticUnderlineWarn", colors.none, colors.none, styles.undercurl, cWarn)
   Group.new("DiagnosticUnderlineInfo", colors.none, colors.none, styles.undercurl, cInfo)
-  Group.new("DiagnosticUnderlineHint", colors.none, colors.none, styles.undercurl, cHint)
+  Group.new("DiagnosticUnderlineHint", colors.none, colors.none, styles.undercurl, cHint) ]]

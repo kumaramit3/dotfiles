@@ -16,6 +16,7 @@ require 'nvim-treesitter.configs'.setup {
   ensure_installed = {
     'c',
     'cpp',
+    'typescript',
     'tsx',
     'lua',
     'python',
@@ -23,6 +24,9 @@ require 'nvim-treesitter.configs'.setup {
     'yaml',
     'html',
     'css',
+    'toml',
+    'markdown',
+    'markdown_inline'
   },
   autotag = {
     enable=true

@@ -1,5 +1,7 @@
-local nvim_lsp=require('lspconfig')
-local capabilities=require('cmp_nvim_lsp').default_capabilities()
+local status,nvim_lsp = pcall(require,'lspconfig')
+if (not status) then return end
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local opts = {noremap=true,silent=true}
 
@@ -15,10 +17,10 @@ local on_attach = function(client,bufnr)
     end
 end
 
-local lspServers = {'tsserver','pyright','tailwindcss'}
+local lspServers = {'tsserver','pyright','tailwindcss','clangd'}
 
 for _, lsp in pairs(lspServers) do
-    nvim_lsp[lsp].setup{
+   nvim_lsp[lsp].setup{
         on_attach=on_attach,
         capabilities=capabilities
     }

@@ -2,7 +2,7 @@ vim.opt.number=true
 vim.opt.relativenumber = true
 vim.opt.expandtab=true
 vim.opt.sw=2
-vim.opt.ts=2
+vim.opt.ts=4
 vim.opt.mouse='a'
 vim.opt.signcolumn='yes'
 vim.opt.wrap=false
@@ -40,3 +40,4 @@ vim.cmd [[
   au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=100})
   augroup END
 ]]
+vim.cmd("colorscheme onedark")
